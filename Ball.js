@@ -2,9 +2,13 @@ class Ball{
 
     constructor(x,y,width,height){
 
+class Ball{
+
+    constructor(x,y,width,height){
+
         var option = {
  
-            friction: 0.005,
+            frictionAir: 0.005,
             density: 1
             
         }
