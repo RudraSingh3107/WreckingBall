@@ -6,8 +6,8 @@ class Rope{
  
             bodyA : bodyA,
             pointB : pointB,
-            stiffness : 1.7,
-            length : 350
+            stiffness : 0.5,
+            length : 600
             
         }
         this.pointB = pointB;
