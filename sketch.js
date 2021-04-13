@@ -1,6 +1,7 @@
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
 
 //var ball;
 var engine ;
@@ -52,7 +53,7 @@ function setup() {
   box24 = new Box(970, 100, 70, 70);
 
   ball2 = new Ball(300,100,90,90);
-  rope = new Rope(ball2.body, {x: 400, y: 50});
+  rope = new Rope(ball2.body, {x: 600, y: 100});
 }
 
 function draw() {
@@ -87,8 +88,13 @@ function draw() {
   box23.display();
   box24.display();
 
-  ball2.display();
   rope.display();
+  ball2.display();
 
   //console.log(box2.body.angle);
+}
+
+function mouseDragged(){
+
+  Matter.Body.setPosition(ball2.body,{x: mouseX, y: mouseY});
 }
